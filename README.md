@@ -151,6 +151,45 @@ Date:   Mon Sep 11 17:54:36 2023 -0300
  3 files changed, 60 insertions(+), 2 deletions(-)
 ```
 
+- http/https-server-02 force error
+- terminal one:
+
+```bash
+bun run src/index.ts
+
+# end with Ctrl-C
+^C
+victor@victorpc:bun-tutorial$
+```
+
+- terminal two:
+
+```bash
+victor@victorpc:bun-tutorial$ curl http://localhost:3000/hello
+oops!!
+```
+
+- terminal one:
+
+```bash
+victor@victorpc:bun-tutorial$ bun run src/index.ts
+1 | import { type ServeOptions } from "bun"
+2 |
+3 | Bun.serve({
+4 |   fetch(request: Request) {
+5 |     throw new Error("bad request")
+              ^
+error: bad request
+      at fetch (/home/victor/Work/Learn/Bun/KaizenCodes/bun-tutorial/src/index.ts:5:10)
+
+^C
+victor@victorpc:bun-tutorial$
+
+# end with Ctrl-C
+^C
+victor@victorpc:bun-tutorial$
+```
+
 ### 19:34 Bun WebSockets
 
 ### 24:10 Bun File I/O
