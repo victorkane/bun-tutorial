@@ -53,6 +53,8 @@ Congrats! You're already on the latest version of bun (which is v1.0.0)
 
 - [Bun Docs Quickstart](https://bun.sh/docs/quickstart)
 
+### 03:28 Bun CLI init, run & create
+
 ```bash
 victor@victorpc:KaizenCodes$ pwd
 /home/victor/Work/Learn/Bun/KaizenCodes
@@ -80,12 +82,58 @@ Hello via Bun!
 ```
 
 - TS just runs right out of the box
+- running script
 
-### 03:28 Bun CLI init, run & create
+```bash
+victor@victorpc:bun-tutorial$ bun run
+bun-tutorial scripts:
+
+ bun run dev
+   bun run src/index.ts
+
+1 scripts
+
+victor@victorpc:bun-tutorial$ bun run dev
+$ bun run src/index.ts
+Hello via Bun!
+```
+
+- [bun create](https://bun.sh/docs/templates) from templates:
+
+```text
+bun create <template> [<destination>]
+
+Assuming you don't have a local template with the same name, this command will download and execute the create-<template> package from npm. The following two commands will behave identically:
+
+bun create remix
+
+bunx create-remix
+```
 
 ### 08:54 Bun build API and bunx CLI
 
 ### 14:28 Bun HTTP/HTTPS server
+
+- http/https-server-01
+- in one terminal:
+
+```bash
+bun run src/index.ts
+
+# end with Ctrl-C
+^C
+victor@victorpc:bun-tutorial$
+```
+
+- in another terminal while server is running
+
+```bash
+victor@victorpc:bun-tutorial$ curl http://localhost:3000
+http://localhost:3000/
+victor@victorpc:bun-tutorial$ curl http://localhost:3000/hello
+http://localhost:3000/hello
+victor@victorpc:bun-tutorial$
+```
 
 ### 19:34 Bun WebSockets
 
