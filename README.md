@@ -190,7 +190,107 @@ victor@victorpc:bun-tutorial$
 victor@victorpc:bun-tutorial$
 ```
 
+- By supplying https certificates, the code rem'd out in `src/index.ts` can serve to directly use https urls instead of http urls
+
 ### 19:34 Bun WebSockets
+
+- http/https-server-03-websocket
+- see `src/websocket.ts`
+- Open a terminal in the project directory and open a websocket connection
+
+```bash
+victor@victorpc:bun-tutorial$ ls
+bun.lockb  node_modules  package.json  README.md  src  tsconfig.json
+victor@victorpc:bun-tutorial$ bun run src/websocket.ts
+
+```
+
+- Leaving that websocket connection open, in a browser code console, type
+
+```ts
+const ws2 = new WebSocket("ws://localhost:3000")
+undefined
+ws2.addEventListener("message", (data) => console.log(data))
+undefined
+ws2.send("Hello")
+undefined
+```
+
+- The message is shown in the first terminal:
+
+```bash
+victor@victorpc:bun-tutorial$ ls
+bun.lockb  node_modules  package.json  README.md  src  tsconfig.json
+victor@victorpc:bun-tutorial$ bun run src/websocket.ts
+A new client connected  # after new WebSocket `w2` created
+Hello                   # after message sent
+```
+
+- Browser console also adds `MessageEvent` object it receives from the Bun websocket server
+
+```text
+MessageEvent {isTrusted: true, data: 'Hello from Bun WS', origin: 'ws://localhost:3000', lastEventId: '', source: null, …}
+isTrusted
+:
+true
+bubbles
+:
+false
+cancelBubble
+:
+false
+cancelable
+:
+false
+composed
+:
+false
+currentTarget
+:
+WebSocket {url: 'ws://localhost:3000/', readyState: 1, bufferedAmount: 0, onopen: null, onerror: null, …}
+data
+:
+"Hello from Bun WS"
+defaultPrevented
+:
+false
+eventPhase
+:
+0
+lastEventId
+:
+""
+origin
+:
+"ws://localhost:3000"
+ports
+:
+[]
+returnValue
+:
+true
+source
+:
+null
+srcElement
+:
+WebSocket {url: 'ws://localhost:3000/', readyState: 1, bufferedAmount: 0, onopen: null, onerror: null, …}
+target
+:
+WebSocket {url: 'ws://localhost:3000/', readyState: 1, bufferedAmount: 0, onopen: null, onerror: null, …}
+timeStamp
+:
+159837.5
+type
+:
+"message"
+userActivation
+:
+null
+[[Prototype]]
+:
+MessageEvent
+```
 
 ### 24:10 Bun File I/O
 
