@@ -1,1 +1,18 @@
-Some content to stdout
+{
+  "name": "bun-tutorial",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run index.ts",
+    "start": "bun run src/files.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "react-dom": "^18.2.0"
+  }
+}
