@@ -294,6 +294,27 @@ MessageEvent
 
 ### 24:10 Bun File I/O
 
+- Bun file operations
+- See `src/files.ts`
+
+```bash
+victor@victorpc:bun-tutorial$ bun run src/files.ts
+{
+  file: "files.ts",
+  path: "/home/victor/Work/Learn/Bun/KaizenCodes/bun-tutorial/src/files.ts",
+  dir: "/home/victor/Work/Learn/Bun/KaizenCodes/bun-tutorial/src",
+  main: true,
+  url: "file:///home/victor/Work/Learn/Bun/KaizenCodes/bun-tutorial/src/files.ts"
+}
+Still writing
+Wrote some more stuff
+Finishing..
+```
+
+- `package.json` has been wiped out and replaced by `Some content to stdout` 😄
+- `src/test.txt` has been written out
+
+
 ### 35:48 Bun SQlite Database
 
 ### 38:06 Bun FileSystemRouter
