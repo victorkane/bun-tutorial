@@ -135,6 +135,22 @@ http://localhost:3000/hello
 victor@victorpc:bun-tutorial$
 ```
 
+- commit
+
+```bash
+victor@victorpc:bun-tutorial$ git log --stat
+commit e8b0b6508c10061c9713716cb3c1894fd0be8799 (HEAD -> master)
+Author: victorkane <victorkane@gmail.com>
+Date:   Mon Sep 11 17:54:36 2023 -0300
+
+    feat: http/https-server-01
+
+ README.md    | 50 ++++++++++++++++++++++++++++++++++++++++++++++-
+ package.json |  3 +++
+ src/index.ts |  9 ++++++++-
+ 3 files changed, 60 insertions(+), 2 deletions(-)
+```
+
 ### 19:34 Bun WebSockets
 
 ### 24:10 Bun File I/O
