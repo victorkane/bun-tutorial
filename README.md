@@ -314,14 +314,28 @@ Finishing..
 - `package.json` has been wiped out and replaced by `Some content to stdout` 😄
 - `src/test.txt` has been written out
 
-
 ### 35:48 Bun SQlite Database
+
+- The example is quite `lite`
+  - See [Bun Docs: SQLite](https://bun.sh/docs/api/sqlite)
+    - [db operations](https://bun.sh/docs/api/sqlite#database)
+- For Prisma, see the [Bun Docs: Get started using Prisma with Bun](https://bun.sh/guides/ecosystem/prisma)
+- Bun also does [MongoDB using Mongoose](https://bun.sh/guides/ecosystem/mongoose)!
+- These two lines open an sqlite database, or create one if none exist:
+
+```ts
+import { Database } from "bun:sqlite"
+
+const db = new Database("db.sqlite")
+```
 
 ### 38:06 Bun FileSystemRouter
 
 ### 41:00 Bun Test Runner
 
 ### 44:28 Bun HTMX app
+
+---
 
 ## bun install
 
